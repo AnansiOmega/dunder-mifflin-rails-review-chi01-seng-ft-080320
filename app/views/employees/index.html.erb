@@ -1,0 +1,7 @@
+<h1> Employees of Dunder Mifflin </h1>
+
+<% @employees.each do |worker| %>
+    <p> <%= link_to(worker.first_name + " " + worker.last_name, employee_path(worker)) %> </p>
+    <% end %>
+
+    <%= button_to "Become an employee!", new_employee_path, method: :get %>

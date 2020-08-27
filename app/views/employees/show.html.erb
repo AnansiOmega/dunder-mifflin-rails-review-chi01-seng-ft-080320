@@ -1,0 +1,10 @@
+<h1> Dunder Mifflin All Star </h1>
+
+   <h2> Name: <%= @employee.first_name + " " + @employee.last_name %> </h2>
+    <h4> Alias: <%= @employee.alias %> </h4>
+    <p> Title: <%= @employee.title %> </p>
+    <p> Office: <%= @employee.office %> </p>
+    <p> Dog Name: <%= @employee.dog.name %> </p>
+
+    <%= button_to "Back to index", employees_path, method: :get %>
+    <%= button_to "Edit Profile", edit_employee_path(@employee), method: :get %>
